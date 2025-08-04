@@ -20,5 +20,5 @@ class OrderAdmin(admin.ModelAdmin):
     
     total_amount_display.short_description = 'Total Amount'
 
-admin.site.Register(Order , OrderAdmin)    
+admin.site.register(Order , OrderAdmin)    
 
