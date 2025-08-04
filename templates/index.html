@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 
 <html>
-
 <head> 
-    <title>HomePage</title>
-
+    <title> WELCOME TO HOME PAGE </title>
 </head>
+
 <body>
-    <h1> WELCOME TO THE HOME PAGE </h1>
-    <h2> MENU </h2>
-    <ul>
+    <h1> WELCOME TO HOME PAGE </h1>
+    <h2> MENU ITEMS </h2>
+    <ul> 
         {% for product in products %}
-            <li> {{ product.name }} - {{ product.price }}</li>
+        <li> {{ product.item_name }} - {{ product.item_price }} </li>
+        {% empty %}
+        <li> No Product Available</li>
         {% endfor %}
     </ul>
+
+
 </body>
 
 
