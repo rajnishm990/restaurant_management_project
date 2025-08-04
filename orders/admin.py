@@ -6,7 +6,7 @@ from .models import Order
 class OrderInLine(admin.TabularInline):
     model = Order
     extra = 1 #number of extra blank forms 
-    readonly_fields = ['total_price']
+    readonly_fields = ['total_amount']
     can_delete=True 
 
 class OrderAdmin(admin.ModelAdmin):
@@ -16,5 +16,9 @@ class OrderAdmin(admin.ModelAdmin):
     linlines = [OrderInLine]
 
     def total_amount_display(self, obj):
-        return obj.total_price
+        return obj.total_amount
+    
+    total_amount_display.short_description = 'Total Amount'
+
+admin.site.Register(Order , OrderAdmin)    
 
