@@ -8,3 +8,14 @@ class Item(models.Model):
 
     def __str__(self):
         return str(self.item_name)
+
+class MenuItem(models.Model):
+    name = models.CharField(max_length = 200)
+    description = models.TextField()
+    price = models.DecimalField(max_digits10 , decimal_places=2)
+
+    def __str__(self):
+        return f"{self.name} - {self.description[:50]}"
+
+
+#for migrations we can run python manage.py makemigration - for setting up and syncing and then python manage.py migrate to commit migrations
