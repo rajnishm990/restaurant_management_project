@@ -19,6 +19,11 @@ def HomePage(request):
     context = {"products":products, 'success':success , 'restaurant':restaurant}
     return render (request , "index.html", context)
 
+def about_us(request):
+    restaurant = Restaurant.objects.all()
+    context = {"restaurant":restaurant}
+    return render (request , 'about-us.html', context)
+
 def menu_item_view(request):
     '''For displaying menu items '''
     menu_items = MenuItem.objects.all()
