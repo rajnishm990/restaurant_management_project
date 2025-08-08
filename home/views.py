@@ -20,6 +20,8 @@ def HomePage(request):
 
 def menu_item_view(request):
     '''For displaying menu items '''
-    menu_items = 
+    menu_items = MenuItem.objects.all()
+    context = {"menu_items": menu_items}
+    return render(request , 'menu.html', context)
 
 
