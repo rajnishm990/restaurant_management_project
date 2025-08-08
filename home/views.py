@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from products.model import Item 
-from .models import Contact
+from .models import Contact, MenuItem
 
 # Create your views here.
 
@@ -17,5 +17,9 @@ def HomePage(request):
     products = Item.objects.all()
     context = {"products":products, 'success':success}
     return render (request , "index.html", context)
+
+def menu_item_view(request):
+    '''For displaying menu items '''
+    menu_items = 
 
 
