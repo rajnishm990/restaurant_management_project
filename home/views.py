@@ -15,8 +15,8 @@ def HomePage(request):
             Contact.objects.create(name=name, email=email)
     
     products = Item.objects.all()
-    restaurant = 
-    context = {"products":products, 'success':success}
+    restaurant = Restaurant.objects.all()
+    context = {"products":products, 'success':success , 'restaurant':restaurant}
     return render (request , "index.html", context)
 
 def menu_item_view(request):
