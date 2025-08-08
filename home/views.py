@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from products.model import Item 
-from .models import Contact, MenuItem
+from .models import Contact, MenuItem , Restaurant
 
 # Create your views here.
 
@@ -15,6 +15,7 @@ def HomePage(request):
             Contact.objects.create(name=name, email=email)
     
     products = Item.objects.all()
+    restaurant = 
     context = {"products":products, 'success':success}
     return render (request , "index.html", context)
 
