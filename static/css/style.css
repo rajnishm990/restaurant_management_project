@@ -1,0 +1,62 @@
+body {
+    font-family: Arial , sans-serif;
+    background-color: #fefefe;
+    margin:0;
+    padding: 0;
+    color: #333;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    padding :40px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0,0.5);
+
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom:10px;
+
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+a.btn{
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+a.btn:hover{
+    background-color: #2980db;
+}
+
+form input ,form textarea form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button{
+    background-color: #2ecc71;
+    color: white;
+    cursor: pointer;
+}
+
+for button:hover{
+    background-color: #27ae60;
+}
