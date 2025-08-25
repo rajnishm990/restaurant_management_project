@@ -30,4 +30,8 @@ def menu_item_view(request):
     context = {"menu_items": menu_items}
     return render(request , 'menu.html', context)
 
+def contact_us(request):
+    ''' For contact related '''
+    return render(request , 'contact-us.html')
+
 
