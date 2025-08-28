@@ -9,7 +9,7 @@
 
 <body>
     <h1> WELCOME TO HOME PAGE </h1>
-    <h2> MENU ITEMS </h2>
+    <h2> OUR MENU ITEMS </h2>
     <ul> 
         {% for product in products %}
         <li> {{ product.item_name }} - {{ product.item_price }} </li>
@@ -35,12 +35,9 @@
     <button type="submit">Submit </button> 
     </form>
 
-    <h3>Other ways to contact ? <a href="{% url 'contact' %}"> our contacts </a>
-    
-
     <section>
         <!-- Resturant Name's section -->
-        <h1> Welcome to  {{ restaurant.name }} </h1>
+        <h1> Welcome to {{ restaurant.name }} </h1>
         <h3> <a href="{% url 'about' %}"> Know more about us </a> </h3>
         
     </section>
@@ -49,7 +46,6 @@
         <!--Restaurant Address Sectior -->
         <h2> Visit Us </h2>
         <p> P-138 Dummy Address CP , Delhi , India </p>
-        <p> {{ restaurant.phone }}
 
 
         <div style="width: 100%; max-width=600px">
