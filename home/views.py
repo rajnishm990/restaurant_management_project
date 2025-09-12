@@ -13,8 +13,13 @@ def HomePage(request):
 
         if name and email:
             Contact.objects.create(name=name, email=email)
-    
-    products = Item.objects.all()
+        else:
+            return Response({"detail": "name and email required"})
+    try:
+        products = Item.objects.all()
+    except Exception as e:
+        return Response({"Can't fetch teh Items , please try again later"})
+
     restaurant = Restaurant.objects.all()
     context = {"products":products, 'success':success , 'restaurant':restaurant}
     return render (request , "index.html", context)
@@ -29,9 +34,5 @@ def menu_item_view(request):
     menu_items = MenuItem.objects.all()
     context = {"menu_items": menu_items}
     return render(request , 'menu.html', context)
-
-def contact_us(request):
-    ''' For contact related '''
-    return render(request , 'contact-us.html')
 
 
