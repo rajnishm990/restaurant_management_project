@@ -6,7 +6,7 @@ body {
     color: #333;
 
 }
-/* container */
+
 .container{
     max-width: 800px;
     margin: auto;
@@ -14,6 +14,18 @@ body {
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0,0.5);
 
+}
+
+.logo{
+    width: 150px;
+    height: auto;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
 }
 
 h1, h2 {
